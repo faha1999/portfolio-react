@@ -1,5 +1,5 @@
 .MainContainer {
-  width: 100vh;
+  //width: 100vh;
   height: 100vh;
   overflow: hidden;
   position: relative;
@@ -15,6 +15,53 @@
 
   .container {
     padding: 2rem;
+
+    .contact {
+      position: absolute;
+      top: 2rem;
+      right: calc(1rem + 2vw);
+      text-decoration: none;
+      z-index: 1;
+      color: #000;
+    }
+
+    .blog {
+      position: absolute;
+      top: 50%;
+      right: calc(1rem + 2vw);
+      transform: rotate(90deg) translate(-50%, -50%);
+      text-decoration: none;
+      z-index: 1;
+      color: #000;
+    }
+
+    .work {
+      position: absolute;
+      top: 50%;
+      left: calc(1rem + 2vw);
+      transform: translate(-50%, -50%) rotate(-90deg);
+      text-decoration: none;
+      z-index: 1;
+      color: #000;
+    }
+
+    .bottomBar {
+      position: absolute;
+      bottom: 1rem;
+      left: 0;
+      right: 0;
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+
+      .about,
+      .skills {
+        color: #000;
+        text-decoration: none;
+        z-index: 1;
+      }
+    }
   }
 }
 
