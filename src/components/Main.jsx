@@ -17,24 +17,24 @@ export const Main = () => {
           target="_blank"
           to={{ pathname: 'mailto:kafahad1999@gmail.com' }}
         >
-          <h3>Say hi...</h3>
+          <h2>Say hi...</h2>
         </NavLink>
 
         <NavLink className="blog" to="./blog">
-          <h3>Blog</h3>
+          <h2>Blog</h2>
         </NavLink>
 
         <NavLink className="work" to="./work">
-          <h3>Work</h3>
+          <h2>Work</h2>
         </NavLink>
 
         <div className="bottomBar">
           <NavLink className="about" to="./about">
-            <h3>About</h3>
+            <h2>About</h2>
           </NavLink>
 
           <NavLink className="skills" to="./skill">
-            <h3>My skills</h3>
+            <h2>My skills</h2>
           </NavLink>
         </div>
       </div>
