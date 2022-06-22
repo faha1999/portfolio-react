@@ -16,6 +16,39 @@
   .container {
     padding: 2rem;
 
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        padding-top: 1rem;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0);
+        }
+
+        from {
+          transform: rotate(360deg);
+        }
+      }
+
+      & > :first-child {
+        animation: rotate 1.5s linear 0s infinite;
+      }
+    }
+
     .contact {
       @include MainNav;
       top: 2rem;

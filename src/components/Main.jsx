@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { YinYang } from './AllSvgs';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
@@ -11,6 +12,13 @@ export const Main = () => {
         <PowerButton />
         <LogoComponent />
         <SocialIcons />
+
+        <div>
+          <button className="center">
+            <YinYang width={130} height={130} fill="black" />
+            <span>Click here</span>
+          </button>
+        </div>
 
         <NavLink
           className="contact"
