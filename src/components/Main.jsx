@@ -1,11 +1,50 @@
 import React from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import styled, { keyframes } from 'styled-components';
 import { YinYang } from './AllSvgs';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 
+const rotate = keyframes`
+from{
+    transform: rotate(0);
+}
+to{
+    transform: rotate(360deg);
+}
+`;
+
+const Center = styled.button`
+  position: absolute;
+  top: ${(props) => (props.click ? '85%' : '50%')};
+  left: ${(props) => (props.click ? '92%' : '50%')};
+  transform: translate(-50%, -50%);
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+
+  & > :first-child {
+    animation: ${rotate} infinite 1.5s linear;
+  }
+
+  & > :last-child {
+    display: ${(props) => (props.click ? 'none' : 'inline-block')};
+    padding-top: 1rem;
+  }
+`;
 export const Main = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
   return (
     <div className="MainContainer">
       <div className="container">
@@ -13,12 +52,15 @@ export const Main = () => {
         <LogoComponent />
         <SocialIcons />
 
-        <div>
-          <button className="center">
-            <YinYang width={130} height={130} fill="black" />
-            <span>Click here</span>
-          </button>
-        </div>
+        <Center click={click}>
+          <YinYang
+            onClick={() => handleClick()}
+            width={click ? 120 : 200}
+            height={click ? 120 : 200}
+            fill="currentColor"
+          />
+          <span>click here</span>
+        </Center>
 
         <NavLink
           className="contact"
