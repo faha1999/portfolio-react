@@ -17,20 +17,8 @@ to{
 `;
 
 const Center = styled.button`
-  position: absolute;
   top: ${(props) => (props.click ? '85%' : '50%')};
   left: ${(props) => (props.click ? '92%' : '50%')};
-  transform: translate(-50%, -50%);
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: all 1s ease;
 
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
@@ -43,15 +31,8 @@ const Center = styled.button`
 `;
 
 const DarkDiv = styled.div`
-  position: absolute;
-  top: 0;
-  background-color: #000;
-  bottom: 0;
-  right: 50%;
   width: ${(props) => (props.click ? '50%' : '0%')};
   height: ${(props) => (props.click ? '100%' : '0%')};
-  z-index: 1;
-  transition: height 0.5s ease, width 1s ease 0.5s;
 `;
 
 export const Main = () => {
@@ -60,13 +41,13 @@ export const Main = () => {
 
   return (
     <div className="MainContainer">
-      <DarkDiv click={click} />
+      <DarkDiv className="darkDiv" click={click} />
       <div className="container">
         <PowerButton />
         <LogoComponent />
         <SocialIcons />
 
-        <Center click={click}>
+        <Center className="center" click={click}>
           <YinYang
             onClick={() => handleClick()}
             width={click ? 120 : 200}

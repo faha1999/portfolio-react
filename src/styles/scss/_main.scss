@@ -13,13 +13,21 @@
     font-weight: 500;
   }
 
+  .darkDiv {
+    z-index: 1;
+    transition: height 0.5s ease, width 1s ease 0.5s;
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    bottom: 0;
+    right: 50%;
+  }
+
   .container {
     padding: 2rem;
 
     .center {
       position: absolute;
-      // top: 50%;
-      // left: 50%;
       transform: translate(-50%, -50%);
       border: none;
       outline: none;
@@ -29,24 +37,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-
-      span {
-        padding-top: 1rem;
-      }
-
-      @keyframes rotate {
-        from {
-          transform: rotate(0);
-        }
-
-        from {
-          transform: rotate(360deg);
-        }
-      }
-
-      & > :first-child {
-        animation: rotate 1.5s linear 0s infinite;
-      }
+      transition: all 1s ease;
     }
 
     .contact {
