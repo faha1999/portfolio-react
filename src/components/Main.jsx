@@ -41,12 +41,26 @@ const Center = styled.button`
     padding-top: 1rem;
   }
 `;
+
+const DarkDiv = styled.div`
+  position: absolute;
+  top: 0;
+  background-color: #000;
+  bottom: 0;
+  right: 50%;
+  width: ${(props) => (props.click ? '50%' : '0%')};
+  height: ${(props) => (props.click ? '100%' : '0%')};
+  z-index: 1;
+  transition: height 0.5s ease, width 1s ease 0.5s;
+`;
+
 export const Main = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
 
   return (
     <div className="MainContainer">
+      <DarkDiv click={click} />
       <div className="container">
         <PowerButton />
         <LogoComponent />
@@ -74,12 +88,12 @@ export const Main = () => {
           <h2>Blog</h2>
         </NavLink>
 
-        <NavLink className="work" to="./work">
+        <NavLink className="work" to="./work" click={click}>
           <h2>Work</h2>
         </NavLink>
 
-        <div className="bottomBar">
-          <NavLink className="about" to="./about">
+        <div className="bottomBar" click={click}>
+          <NavLink className="about" to="./about" click={click}>
             <h2>About</h2>
           </NavLink>
 
