@@ -65,14 +65,13 @@
       bottom: 1rem;
       left: 0;
       right: 0;
-      width: 90%;
+      width: 60%;
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
 
       .about,
       .skills {
-        color: #000;
         text-decoration: none;
         z-index: 1;
       }
@@ -112,7 +111,6 @@
 // LogoComponent
 .logo {
   position: fixed;
-  color: #000;
   left: 2rem;
   top: 2rem;
   z-index: 3;
@@ -137,10 +135,9 @@
   & > *:not(:last-child) {
     margin: 0.5rem 0;
   }
-}
 
-.line {
-  width: 2px;
-  height: 8rem;
-  background-color: #000;
+  .line {
+    width: 2px;
+    height: 8rem;
+  }
 }

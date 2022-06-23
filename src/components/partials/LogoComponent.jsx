@@ -1,9 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
+import { DarkTheme } from '../Themes';
 
-export const LogoComponent = () => {
+const Logo = styled.h1`
+  color: ${(props) =>
+    props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
+`;
+
+export const LogoComponent = (props) => {
   return (
-    <div className="logo">
+    <Logo className="logo" color={props.theme}>
       <h1>Faha</h1>
-    </div>
+    </Logo>
   );
 };

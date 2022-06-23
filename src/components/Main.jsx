@@ -7,6 +7,30 @@ import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 
+const MainContainer = styled.div`
+  background: ${(props) => props.theme.body};
+`;
+
+const Contact = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+`;
+
+const BLOG = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+`;
+
+const WORK = styled(NavLink)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+`;
+
+const ABOUT = styled(NavLink)`
+  color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
+`;
+
+const SKILLS = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+`;
+
 const rotate = keyframes`
 from{
     transform: rotate(0);
@@ -40,12 +64,12 @@ export const Main = () => {
   const handleClick = () => setClick(!click);
 
   return (
-    <div className="MainContainer">
+    <MainContainer className="MainContainer">
       <DarkDiv className="darkDiv" click={click} />
       <div className="container">
         <PowerButton />
-        <LogoComponent />
-        <SocialIcons />
+        <LogoComponent theme={click ? 'dark' : 'light'} />
+        <SocialIcons theme={click ? 'dark' : 'light'} />
 
         <Center className="center" click={click}>
           <YinYang
@@ -57,32 +81,32 @@ export const Main = () => {
           <span>click here</span>
         </Center>
 
-        <NavLink
+        <Contact
           className="contact"
           target="_blank"
           to={{ pathname: 'mailto:kafahad1999@gmail.com' }}
         >
           <h2>Say hi...</h2>
-        </NavLink>
+        </Contact>
 
-        <NavLink className="blog" to="./blog">
+        <BLOG className="blog" to="./blog">
           <h2>Blog</h2>
-        </NavLink>
+        </BLOG>
 
-        <NavLink className="work" to="./work" click={click}>
+        <WORK className="work" to="./work" click={click}>
           <h2>Work</h2>
-        </NavLink>
+        </WORK>
 
         <div className="bottomBar" click={click}>
-          <NavLink className="about" to="./about" click={click}>
+          <ABOUT className="about" to="./about" click={click}>
             <h2>About</h2>
-          </NavLink>
+          </ABOUT>
 
-          <NavLink className="skills" to="./skill">
+          <SKILLS className="skills" to="./skill">
             <h2>My skills</h2>
-          </NavLink>
+          </SKILLS>
         </div>
       </div>
-    </div>
+    </MainContainer>
   );
 };
