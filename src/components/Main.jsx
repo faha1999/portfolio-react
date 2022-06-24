@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { YinYang } from './AllSvgs';
+import { Intro } from './Intro';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
@@ -107,6 +108,8 @@ export const Main = () => {
           </SKILLS>
         </div>
       </div>
+
+      {click ? <Intro click={click} /> : null}
     </MainContainer>
   );
 };
