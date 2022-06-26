@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
 import { YinYang } from './AllSvgs';
 import { Intro } from './Intro';
 import { LogoComponent } from './partials/LogoComponent';
@@ -87,24 +88,89 @@ export const Main = () => {
           target="_blank"
           to={{ pathname: 'mailto:kafahad1999@gmail.com' }}
         >
-          <h2>Say hi...</h2>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Say hi...
+          </motion.h2>
         </Contact>
 
         <BLOG className="blog" to="./blog">
-          <h2>Blog</h2>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            Blog
+          </motion.h2>
         </BLOG>
 
         <WORK className="work" to="./work" click={click}>
-          <h2>Work</h2>
+          <motion.h2
+            initial={{
+              y: -200,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            animate={{
+              y: 0,
+              transition: { type: 'spring', duration: 1.5, delay: 1 },
+            }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            >Work
+          </motion.h2>
         </WORK>
 
         <div className="bottomBar" click={click}>
           <ABOUT className="about" to="./about" click={click}>
-            <h2>About</h2>
+            <motion.h2
+              initial={{
+                y: -200,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              About
+            </motion.h2>
           </ABOUT>
 
           <SKILLS className="skills" to="./skill">
-            <h2>My skills</h2>
+            <motion.h2
+              initial={{
+                y: 200,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: 'spring', duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              My skills
+            </motion.h2>
           </SKILLS>
         </div>
       </div>
