@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
+import { Blogs } from './Blogs';
+import { BlogData } from '../data/BlogData';
 
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
@@ -18,9 +20,9 @@ export const Blog = () => {
 
         <div className="center">
           <div className="grid">
-            <h1>blogs</h1>
-            <h1>blogs</h1>
-            <h1>blogs</h1>
+            {BlogData.map((blog) => {
+              return <Blogs key={blog.id} blog={blog} />;
+            })}
           </div>
         </div>
       </Container>
