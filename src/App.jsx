@@ -1,6 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, DarkTheme } from './components/Themes';
-import { Route, Routes } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { About } from './components/About';
 import { Main } from './components/Main';
 import { Blog } from './components/Blog';

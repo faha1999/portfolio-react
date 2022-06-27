@@ -112,7 +112,7 @@ export const YinYang = (props) => {
   );
 };
 
-export const Anchor = (props) => {
+export const Anchors = (props) => {
   return (
     <svg
       aria-hidden="true"

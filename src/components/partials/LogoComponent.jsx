@@ -10,7 +10,7 @@ const Logo = styled.h1`
 export const LogoComponent = (props) => {
   return (
     <Logo className="logo" color={props.theme}>
-      <h1>Faha</h1>
+      Faha
     </Logo>
   );
 };

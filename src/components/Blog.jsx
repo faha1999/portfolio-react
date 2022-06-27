@@ -5,6 +5,7 @@ import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 import { Blogs } from './Blogs';
 import { BlogData } from '../data/BlogData';
+import { Anchor } from './partials/Anchor';
 
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
@@ -17,6 +18,7 @@ export const Blog = () => {
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
+        <Anchor />
 
         <div className="center">
           <div className="grid">

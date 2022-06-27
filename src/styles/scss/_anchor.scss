@@ -1,0 +1,24 @@
+.Anchor {
+  position: relative;
+
+  .PreDisplay {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+  }
+
+  .slider {
+    position: fixed;
+    top: 0;
+    right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-100%);
+
+    .chain {
+      transform: rotate(135deg);
+    }
+  }
+}
