@@ -36,7 +36,7 @@ export const Anchor = (props) => {
       </div>
 
       <div className="slider" ref={ref}>
-        {[...Array(25)].map((x, id) => {
+        {[...Array(props.number)].map((x, id) => {
           return (
             <Link
               key={id}
