@@ -1,0 +1,46 @@
+.skills {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .details {
+    padding: 2rem;
+    width: 30vw;
+    height: 60vh;
+    z-index: 3;
+    line-height: 1.5;
+    cursor: pointer;
+    font-family: 'Ubuntu Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: calc(1em + 1vw);
+
+      & > *:first-child {
+        margin-right: 1rem;
+      }
+    }
+
+    .description {
+      font-size: calc(0.6em + 1vw);
+      padding: 0.5rem 0;
+
+      strong {
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      ul,
+      p {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
