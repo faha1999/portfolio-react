@@ -6,6 +6,7 @@ import { Design, Develope } from './AllSvgs';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
+import { Particle } from './partials/Particle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -43,7 +44,8 @@ export const Skill = () => {
     <ThemeProvider theme={lightTheme}>
       <LogoComponent theme={lightTheme} />
       <SocialIcons theme={lightTheme} />
-      <PowerButton theme={lightTheme} />
+      <PowerButton />
+      <Particle />
 
       <Box className="Skills">
         <Details className="details">
