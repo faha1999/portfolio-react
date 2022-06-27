@@ -45,7 +45,7 @@ export const Skill = () => {
       <SocialIcons theme={lightTheme} />
       <PowerButton theme={lightTheme} />
 
-      <Box className="skills">
+      <Box className="Skills">
         <Details className="details">
           <Title className="title">
             <Design width={40} height={40} /> Designer
