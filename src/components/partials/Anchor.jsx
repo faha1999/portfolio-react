@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Anchors, Link } from '../AllSvgs';
 
-export const Anchor = () => {
+export const Anchor = (props) => {
   const ref = useRef(null);
   const hideREf = useRef(null);
 
