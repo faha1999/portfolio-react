@@ -8,6 +8,7 @@ import { SocialIcons } from './partials/SocialIcons';
 import { YinYang } from './AllSvgs';
 import { WorkDetails } from '../data/WorkData';
 import { WorkCard } from './partials/WorkCard';
+import { PageTitle } from './partials/PageTitle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -53,6 +54,8 @@ export const Work = () => {
         <span className="rotate" ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </span>
+
+        <PageTitle text="Work" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

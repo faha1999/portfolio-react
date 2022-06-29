@@ -7,6 +7,7 @@ import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 import { Particle } from './partials/Particle';
+import { PageTitle } from './partials/PageTitle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -96,6 +97,8 @@ export const Skill = () => {
             <p>VScode, Github, Codepen.</p>
           </Description>
         </Details>
+
+        <PageTitle text="My Skills" top="80%" right="30%" />
       </Box>
     </ThemeProvider>
   );

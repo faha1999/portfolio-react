@@ -1,7 +1,7 @@
 .Skills {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  // position: relative;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -48,6 +48,7 @@
 // Particle
 
 .Particle {
+  position: absolute;
   top: 0;
   right: 0;
   left: 0;

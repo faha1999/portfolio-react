@@ -1,5 +1,5 @@
 import React from 'react';
-import { DarkTheme, lightTheme } from './Themes';
+import { DarkTheme } from './Themes';
 import styled, { ThemeProvider } from 'styled-components';
 import astronaut from '../assets/Images/spaceman.png';
 
@@ -7,6 +7,7 @@ import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 import { AboutParticle } from './partials/AboutParticle';
+import { PageTitle } from './partials/PageTitle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -43,6 +44,8 @@ export const About = () => {
           in his own country or outside the country. I believe "Never stop
           dreaming because my success is hiding inside my dream."
         </AboutMe>
+
+        <PageTitle text="About" top="10%" left="5%" />
       </Box>
     </ThemeProvider>
   );

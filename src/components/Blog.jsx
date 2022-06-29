@@ -8,6 +8,7 @@ import { BlogData } from '../data/BlogData';
 import { Anchor } from './partials/Anchor';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { PageTitle } from './partials/PageTitle';
 
 const Container = styled.div`
   background-color: ${(props) => `rgba(${props.theme.bodyRgba},0.8)`};
@@ -36,6 +37,8 @@ export const Blog = () => {
             })}
           </div>
         </div>
+
+        <PageTitle text="Blog" top="5rem" left="5rem" />
       </Container>
     </div>
   );

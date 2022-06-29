@@ -13,8 +13,8 @@ const Title = styled.h1`
 
 export const PageTitle = (props) => {
   return (
-    <Text top={props.top} left={props.left} right={props.right}>
+    <Title top={props.top} left={props.left} right={props.right}>
       {props.text}
-    </Text>
+    </Title>
   );
 };
