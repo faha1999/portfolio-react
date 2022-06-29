@@ -1,0 +1,15 @@
+.Work {
+  height: 400vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .WorkDetails {
+    position: fixed;
+    top: 12rem;
+    left: calc(10rem + 15vw);
+    height: 40vh;
+    display: flex;
+    color: white;
+  }
+}
