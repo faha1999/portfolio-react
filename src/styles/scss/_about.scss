@@ -38,13 +38,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: calc(0.6rem + 1vw);
+    font-size: calc(0.5rem + 1vw);
     backdrop-filter: blur(4px);
-
     position: absolute;
     left: calc(5rem + 5vw);
     top: 10rem;
     font-family: 'Ubuntu Mono', monospace;
     font-style: italic;
   }
+}
+
+// AboutParticle
+.AboutParticle {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
 }

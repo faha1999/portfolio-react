@@ -6,6 +6,7 @@ import astronaut from '../assets/Images/spaceman.png';
 import { LogoComponent } from './partials/LogoComponent';
 import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
+import { AboutParticle } from './partials/AboutParticle';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -19,11 +20,12 @@ const AboutMe = styled.div`
 export const About = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <LogoComponent theme={DarkTheme} />
-      <SocialIcons theme={DarkTheme} />
-      <PowerButton />
-
       <Box className="About">
+        <LogoComponent theme="dark" />
+        <SocialIcons theme="dark" />
+        <PowerButton />
+        <AboutParticle />
+
         <div className="spaceman">
           <img src={astronaut} alt="spaceman" />
         </div>
@@ -38,8 +40,8 @@ export const About = () => {
           people belonging to different backgrounds and cultures. As such
           meetings are always important because they prove to be beneficial in
           future also it makes things easy to cope whether one works or studies
-          in his own country or outside the country. I believe “Never stop
-          dreaming because my success is hiding inside my dream.’’
+          in his own country or outside the country. I believe "Never stop
+          dreaming because my success is hiding inside my dream."
         </AboutMe>
       </Box>
     </ThemeProvider>
