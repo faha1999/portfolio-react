@@ -7,6 +7,7 @@ import { PowerButton } from './partials/PowerButton';
 import { SocialIcons } from './partials/SocialIcons';
 
 import { WorkDetails } from '../data/WorkData';
+import { WorkCard } from './partials/WorkCard';
 
 const Box = styled.div`
   background-color: ${(props) => props.theme.body};
@@ -22,7 +23,7 @@ export const Work = () => {
 
         <div className="WorkDetails">
           {WorkDetails.map((d) => (
-            <h1>WorkDetails</h1>
+            <WorkCard key={d.id} data={d} />
           ))}
         </div>
       </Box>
