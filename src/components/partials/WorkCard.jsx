@@ -1,9 +1,10 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../AllSvgs';
 
-const Card = styled.li`
+const Card = styled(motion.li)`
   background-color: ${(props) => props.theme.text};
   color: ${(props) => props.theme.body};
   border: 1px solid ${(props) => props.theme.body};
@@ -40,11 +41,24 @@ const Git = styled(NavLink)`
   }
 `;
 
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+    },
+  },
+};
+
 export const WorkCard = (props) => {
   const { id, name, description, tags, demo, github } = props.data;
 
   return (
-    <Card className="WorkCard" key={id}>
+    <Card className="WorkCard" key={id} variants={Item}>
       <h2 className="title">{name}</h2>
       <h2 className="description">{description}</h2>
 
