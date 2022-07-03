@@ -41,6 +41,7 @@ const Git = styled(NavLink)`
   }
 `;
 
+// motion
 const Item = {
   hidden: {
     scale: 0,

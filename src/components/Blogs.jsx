@@ -1,8 +1,9 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-const Box = styled(NavLink)`
+const Box = styled(motion(NavLink))`
   color: ${(props) => props.theme.text};
   border: 2px solid ${(props) => props.theme.text};
 
@@ -28,11 +29,25 @@ const Title = styled.h3`
   }
 `;
 
+// motion
+const Item = {
+  hidden: {
+    scale: 0,
+  },
+  show: {
+    scale: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+    },
+  },
+};
+
 export const Blogs = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
 
   return (
-    <div className="Blogs">
+    <motion.div className="Blogs" variants={Item}>
       <Box className="box" target="_blank" to={{ pathname: link }}>
         <Image src={imgSrc} className="image" alt="" />
         <Title className="title">{name}</Title>
@@ -45,6 +60,6 @@ export const Blogs = (props) => {
 
         <span className="date">{date}</span>
       </Box>
-    </div>
+    </motion.div>
   );
 };
