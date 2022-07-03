@@ -7,6 +7,7 @@ import { Blog } from './components/Blog';
 import { Work } from './components/Work';
 import { Skill } from './components/Skill';
 import { AnimatePresence } from 'framer-motion';
+import { Music } from './components/partials/Music';
 
 function App() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={lightTheme}>
+        <Music />
         <AnimatePresence exitBeforeEnter>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Main />} />
