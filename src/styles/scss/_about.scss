@@ -56,3 +56,28 @@
   bottom: 0;
   z-index: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .About {
+    .AboutMe {
+      width: 50vw;
+      height: auto;
+      margin-top: 2rem;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media screen and (min-width: 678px) and (max-width: 1023px) {
+  .About {
+    .AboutMe {
+      width: 60vw;
+      height: 50vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
