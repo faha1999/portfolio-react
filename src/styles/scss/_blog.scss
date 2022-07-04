@@ -74,3 +74,45 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .mainContainer {
+    .container {
+      .Anchor {
+        display: none;
+      }
+
+      .center {
+        padding-top: 7rem;
+
+        .grid {
+          grid-template-columns: 100%;
+        }
+      }
+    }
+  }
+
+  .Blogs {
+    .box {
+      height: 14rem;
+      padding: 0.8rem;
+      backdrop-filter: none;
+
+      .image {
+        height: 70%;
+      }
+
+      .title {
+        font-size: calc(0.6em + 1vw);
+      }
+
+      .HashTags {
+        font-size: calc(0.5em + 1vw);
+      }
+
+      .date {
+        font-size: calc(0.5em + 1vw);
+      }
+    }
+  }
+}

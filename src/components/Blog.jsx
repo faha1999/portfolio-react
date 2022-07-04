@@ -49,7 +49,7 @@ export const Blog = () => {
         <LogoComponent />
         <PowerButton />
         <SocialIcons />
-        <Anchor number={numbers} />
+        <Anchor className="d-none" number={numbers} />
 
         <div className="center">
           <div className="grid">
