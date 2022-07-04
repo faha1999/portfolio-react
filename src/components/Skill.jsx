@@ -98,7 +98,7 @@ export const Skill = () => {
           </Description>
         </Details>
 
-        <PageTitle text="My Skills" top="80%" right="30%" />
+        <PageTitle text="Skills" top="80%" right="30%" />
       </Box>
     </ThemeProvider>
   );

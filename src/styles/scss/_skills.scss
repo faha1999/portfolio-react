@@ -55,3 +55,28 @@
   bottom: 0;
   z-index: 0;
 }
+@media screen and (max-width: 767px) {
+  .Skills {
+    flex-direction: column;
+    padding: 8rem 0px;
+    height: auto;
+
+    .details {
+      width: 50vw;
+      height: max-content;
+
+      .title {
+        font-size: calc(0.8em + 1vw);
+        padding-bottom: 1.2rem;
+      }
+
+      .description {
+        font-size: calc(0.5em + 1vw);
+      }
+
+      &:first-child {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
