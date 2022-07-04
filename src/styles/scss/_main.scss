@@ -114,6 +114,7 @@
   left: 2rem;
   top: 2rem;
   z-index: 3;
+  font-family: Pacifico, cursive;
 
   h1 {
     display: inline-block;
@@ -139,5 +140,45 @@
   .line {
     width: 2px;
     height: 8rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .MainContainer {
+    .container {
+      .work h2,
+      .about h2,
+      .blog h2,
+      .skills h2 {
+        font-size: 1em;
+      }
+      .contact h2 {
+        font-size: 1.1rem;
+      }
+
+      .center {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
+
+  .logo {
+    font-size: 1.5em;
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .socialIcon {
+    left: 1rem;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .line {
+      height: 5rem !important;
+    }
   }
 }

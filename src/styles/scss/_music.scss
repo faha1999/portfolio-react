@@ -21,4 +21,22 @@
   & > *:nth-child(5) {
     animation-delay: 0.8s;
   }
+
+  span {
+    height: 1rem;
+    width: 2px;
+    margin: 0 0.1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .Music {
+    left: 1rem;
+    top: 10rem;
+
+    span {
+      height: 0.5rem;
+      width: 1px;
+    }
+  }
 }
