@@ -75,3 +75,28 @@
     }
   }
 }
+
+@media screen and (max-width: 767px) {
+  .Work {
+    .WorkDetails {
+      left: calc(1rem + 15vw);
+    }
+
+    .rotate {
+      width: 50px;
+      height: 50px;
+
+      svg {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  .WorkCard {
+    width: 12rem;
+    margin-right: 4rem;
+    height: 35vh;
+    padding: 1.5rem;
+  }
+}
