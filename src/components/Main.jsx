@@ -46,6 +46,13 @@ const Center = styled.button`
   top: ${(props) => (props.click ? '85%' : '50%')};
   left: ${(props) => (props.click ? '92%' : '50%')};
 
+  @media screen and (max-width: 767px) {
+    width: ${(props) => (props.click ? '40px' : '150px')};
+    height: ${(props) => (props.click ? '40px' : '150px')};
+
+    left: ${(props) => (props.click ? '85%' : '50%')};
+  }
+
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
