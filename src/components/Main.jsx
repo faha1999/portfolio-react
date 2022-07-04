@@ -69,7 +69,7 @@ export const Main = () => {
     <MainContainer className="MainContainer">
       <DarkDiv className="darkDiv" click={click} />
       <div className="container">
-        <PowerButton />
+        {/* <PowerButton /> */}
         <LogoComponent theme={click ? 'dark' : 'light'} />
         <SocialIcons theme={click ? 'dark' : 'light'} />
 
