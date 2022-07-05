@@ -21,6 +21,31 @@ const Box = styled(motion.div)`
 
   border-left: 2px solid ${(props) => props.theme.body};
   border-right: 2px solid ${(props) => props.theme.text};
+
+  @media screen and (max-width: 767px) {
+    background: none;
+    border: none;
+    border-top: 2px solid ${(props) => props.theme.body};
+    border-bottom: 2px solid ${(props) => props.theme.text};
+    background-image: linear-gradient(
+        ${(props) => props.theme.body} 50%,
+        ${(props) => props.theme.text} 50%
+      ),
+      linear-gradient(
+        ${(props) => props.theme.body} 50%,
+        ${(props) => props.theme.text} 50%
+      );
+    background-size: 2px 100%;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+
+    width: 70vw;
+    // background-size: 100% 2px;
+    height: 70vh !important;
+
+    flex-direction: column;
+    justify-content: space-between;
+  }
 `;
 
 const Text = styled.div`
