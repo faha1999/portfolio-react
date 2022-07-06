@@ -1,5 +1,5 @@
 import React from 'react';
-import { lightTheme } from './Themes';
+import { lightTheme, mediaQueries } from './Themes';
 import styled, { ThemeProvider } from 'styled-components';
 import { Design, Develope } from './AllSvgs';
 
@@ -87,12 +87,12 @@ export const Skill = () => {
             bringing new ideas to life.
           </Description>
 
-          <Description>
+          <Description className="description">
             <strong>Skills</strong>
             <p>Html, Css, Js, React, Sass, Bootstrap, Firebase etc.</p>
           </Description>
 
-          <Description>
+          <Description className="description">
             <strong>Tools</strong>
             <p>VScode, Github, Codepen.</p>
           </Description>

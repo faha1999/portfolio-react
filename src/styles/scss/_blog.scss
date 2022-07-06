@@ -116,3 +116,21 @@
     }
   }
 }
+
+@media screen and (min-width: 678px) and (max-width: 1023px) {
+  .mainContainer {
+    .container {
+      .center {
+        .grid {
+          grid-template-columns: 100%;
+        }
+      }
+    }
+  }
+
+  .Blogs {
+    .box {
+      width: calc(60vw);
+    }
+  }
+}

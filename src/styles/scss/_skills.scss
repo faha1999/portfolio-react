@@ -37,6 +37,7 @@
         margin-bottom: 1rem;
         text-transform: uppercase;
       }
+
       ul,
       p {
         margin-left: 2rem;
@@ -72,6 +73,32 @@
 
       .description {
         font-size: calc(0.5em + 1vw);
+      }
+
+      &:first-child {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 678px) and (max-width: 1023px) {
+  .Skills {
+    flex-direction: column;
+    padding: 8rem 0;
+    height: auto;
+
+    .details {
+      width: 50vw;
+      height: max-content;
+
+      .title {
+        font-size: calc(1em + 2vw);
+        margin-bottom: 1rem;
+      }
+
+      .description {
+        font-size: calc(0.8em + 1vw);
       }
 
       &:first-child {

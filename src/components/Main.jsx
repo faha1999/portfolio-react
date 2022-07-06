@@ -20,7 +20,7 @@ const Contact = styled(NavLink)`
 const BLOG = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 50em) {
     text-shadow: ${(props) => (props.click ? '0 0 4px #000' : 'none')};
   }
 `;
@@ -28,7 +28,7 @@ const BLOG = styled(NavLink)`
 const WORK = styled(NavLink)`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 50em) {
     text-shadow: ${(props) => (props.click ? '0 0 4px #000' : 'none')};
   }
 `;

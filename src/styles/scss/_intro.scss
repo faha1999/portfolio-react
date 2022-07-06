@@ -3,20 +3,17 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 65vw;
   display: flex;
 
   z-index: 1;
 
   .details {
-    width: 50%;
+    // width: 50%;
     position: relative;
     display: flex;
 
     .text {
-      padding: 2rem;
       cursor: pointer;
-      font-size: calc(1em + 1.5vw);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -27,7 +24,6 @@
       }
 
       & > *:last-child {
-        font-size: calc(0.5rem + 1.5vw);
         font-weight: 300;
       }
     }
@@ -37,7 +33,7 @@
       bottom: 0;
       left: 50%;
       transform: translate(-50%, 0%);
-      width: 100%;
+      // width: 100%;
       height: auto;
     }
   }
