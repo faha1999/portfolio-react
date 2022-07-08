@@ -13,7 +13,7 @@ const MainContainer = styled.div`
   background: ${(props) => props.theme.body};
 `;
 
-const Contact = styled(NavLink)`
+const Contact = styled.a`
   color: ${(props) => (props.click ? props.theme.body : props.theme.text)};
 `;
 
@@ -152,7 +152,7 @@ export const Main = () => {
             click={+click}
             className="contact"
             target="_blank"
-            to={{ pathname: 'mailto:kafahad1999@gmail.com' }}
+            href="mailto:kafahad1999@gmail.com"
           >
             <motion.h2
               initial={{
@@ -174,7 +174,7 @@ export const Main = () => {
             className="contact"
             click={+false}
             target="_blank"
-            to={{ pathname: 'mailto:kafahad1999@gmail.com' }}
+            href="mailto:kafahad1999@gmail.com"
           >
             <motion.h3
               initial={{

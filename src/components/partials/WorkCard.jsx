@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { Github } from '../AllSvgs';
 
@@ -23,7 +22,7 @@ const Tags = styled.div`
   }
 `;
 
-const Link = styled(NavLink)`
+const Link = styled.a`
   background-color: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
 
@@ -33,7 +32,7 @@ const Link = styled(NavLink)`
   }
 `;
 
-const Git = styled(NavLink)`
+const Git = styled.a`
   ${Card}:hover & {
     & > * {
       fill: ${(props) => props.theme.text};
@@ -70,11 +69,11 @@ export const WorkCard = (props) => {
       </Tags>
 
       <footer>
-        <Link className="navLink" to={{ pathname: `${demo}` }} target="_blank">
+        <Link className="navLink" href={demo} target="_blank">
           Visit
         </Link>
 
-        <Git className="git" to={{ pathname: `${github}` }} target="_blank">
+        <Git className="git" href={github} target="_blank">
           <Github width={30} height={30} />
         </Git>
       </footer>

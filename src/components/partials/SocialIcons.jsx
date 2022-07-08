@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Facebook, Github, Twitter, YouTube } from '../AllSvgs';
@@ -21,6 +20,7 @@ export const SocialIcons = (props) => {
         <a
           style={{ color: 'inherit' }}
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/faha1999"
         >
           <Github
@@ -39,6 +39,7 @@ export const SocialIcons = (props) => {
         <a
           style={{ color: 'inherit' }}
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/faha1999"
         >
           <Twitter
@@ -57,6 +58,7 @@ export const SocialIcons = (props) => {
         <a
           style={{ color: 'inherit' }}
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/faha1999"
         >
           <Facebook
@@ -75,6 +77,7 @@ export const SocialIcons = (props) => {
         <a
           style={{ color: 'inherit' }}
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/faha1999"
         >
           <YouTube
